@@ -28,4 +28,6 @@ hi i am testing this from another machine to check if ssh is working.
 
 # hashing
     now we r using public-domain single-file implementations of sha256 hash
-    
+    hash formula 
+    $$\text{hash}i = \text{SHA256}(\text{hash}{i-1} \parallel \text{BE64}(\text{frame\_id}) \parallel \text{BE64}(\text{timestamp\_ns}) \parallel \text{frame\_bytes})$$
+
