@@ -1,0 +1,13 @@
+# Binaries & Build Artifacts
+cam
+*.o
+*.dSYM/
+
+# Blackbox Data Artifacts
+footage.mjpeg
+records.bin
+device.key
+device.pub
+anchor.state
+anchors.log
+cron.log
