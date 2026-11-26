@@ -18,3 +18,14 @@ hi i am testing this from another machine to check if ssh is working.
     therefore ./cam vid.mp4--> cam is compiled.
     vid.mp4 is arg1
     
+# parser
+    yea this was kinda um confusing to say the least
+    so here we needed a buffer-safe frame boundary to ensure the mjpeg are sepereated 
+    we needed to septerate them to ensure hashing later on 
+    we did not want to use external lib like idk opencv so yea
+    and jpegs alr come with magic number 0xd8 for start and 0xd9 for end and ofc 0xff for cmd so we used
+    We implemented a prev_was_ff flag outside the loop to catch 0xFF 0xD8 (Start) and 0xFF 0xD9 (End) markers—even when a 2-byte marker is split right across the boundary edge of two separate 4 KB buffer reads.
+
+# hashing
+    now we r using public-domain single-file implementations of sha256 hash
+    
